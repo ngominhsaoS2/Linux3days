@@ -1,0 +1,47 @@
+*** Lesson 13: Changing User password
+passwd <userid>
+
+
+*** Lesson 16: File System Navigation Commands (cd , ls and pwd)
+su - :login vào tài khoản root/adminuser
+pwd :present working directory
+cd :change directory
+ls -l :list with -l option
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
