@@ -17,14 +17,20 @@ cp <sourcefile> <newfile> :copy sourcefile và tạo thành newfile
 mkdir <directoryname> :create a directory, we can create many directories at the same time
 
 
+*** Lesson 20: Finding Files and Directories (find, locate)
+find . -name "puddy" :tìm file có tên là puddy ở thư mục hiện tại pwd
+find / -name "puddy" :find from root folder
 
 
-
-
-
-
-
-
+*** Lesson 21: Wildcards
+rm <filename> :xóa file, có thể xóa nhiều file cùng lúc
+rm abc* :xóa tất cả các file bắt đầu bằng abc
+rm abc?-xyz :xóa tất cả các file kiểu như abc1-xyz, abc2-xyz, ...
+(* - 0 or more characters, ? - 1 single character, [] a range of characters
+\ - as an escape character, ^ the beginning of the line, $ - the end of the line)
+touch abc{1..9}-xyz :tạo file từ abc1-xyz, abc2-xyz, ..., abc9-xyz
+ls -l abc* :list ra toàn bộ file bắt đầu bằng abc
+ls -l *[cd]* :list ra các file có chữ c hoặc có chữ d trong tên
 
 
 
