@@ -9,8 +9,12 @@ cd :change directory
 ls -l :list with -l option
 
 
-
-
+*** Lesson 19: Creating Files and Directories (touch, cp, echo, vi)
+touch <filename> :create a file with filename
+touch <filename1> <filename2> <filename3> :create many files at the same time
+ls -ltr :sắp xếp theo datetime
+cp <sourcefile> <newfile> :copy sourcefile và tạo thành newfile
+mkdir <directoryname> :create a directory, we can create many directories at the same time
 
 
 
