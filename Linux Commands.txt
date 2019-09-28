@@ -33,15 +33,19 @@ ls -l abc* :list ra toàn bộ file bắt đầu bằng abc
 ls -l *[cd]* :list ra các file có chữ c hoặc có chữ d trong tên
 
 
+*** Lesson 25: Pipe (out put của command trước là input của command sau)
+ls -ltr | more :kiểu như phân trang, spacebar để chuyển mỗi trang
+ls -l | tail -2 :list ra các file, sau đó lấy từ đuôi (tail) 2 file
 
 
-
-
-
-
-
-
-
+*** Lesson 26: Files and Directory Permissions
+ls -l jerry :xem thông tin của file tên là jerry
+(r - read, w - write, x - execute || -rwxrwxrwx - chỉ file, rwx đầu là permission cho user, rwx hai là cho group, rwx ba là cho other)
+man <command> :để xem thông tin về một command nào đó, ví dụ man ls
+chmod g-w jerry :thay đổi quyền ở file jerry, g là group, -w là loại bỏ quyền write 
+chmod a-r jerry :thay đổi quyền ở file jerry, a là all, -r là loại bỏ quyền read
+chmod u-w jerry :u là user
+cat jerry :đọc file jerry
 
 
 
