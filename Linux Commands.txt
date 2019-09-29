@@ -48,14 +48,25 @@ chmod u-w jerry :u là user
 cat jerry :đọc file jerry
 
 
+*** Lesson 27: File Ownership Commands
+ls -ltr :cột 3 chỉ user owner, cột 4 chỉ group owner
+chown <username> <filename> :ví dụ chown root jerry, chuyển root sở hữu file jerry
+chgrp <groupname> <filename>
 
 
+*** Lesson 28: Getting help (whatis, -- help, man)
 
 
+*** Lesson 29: Add Text to Files
+echo "My name is SaoNM" :in ra terminal
+echo "SaoNM's been trying on his passion" > jerry :write/overwrite text to file jerry
+cat jerry :in nội dung của file jerry ra terminal
+echo "Never give it up Sao" >> jerry :write at the end of jerry file
+ls -ltr > listingofdir
+date :hiển thị ngày tháng năm giờ phút giây
+date >> jerry
 
 
-
-
-
+melody
 
 
