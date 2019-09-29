@@ -67,6 +67,20 @@ date :hiển thị ngày tháng năm giờ phút giây
 date >> jerry
 
 
-melody
+*** Lesson 29: File System Maintenance
+cp <sourcefile> <newfile> :tạo một bản copy của sourcefile với tên là newfile
+rm <sourcefile> :xoá một file, cung cấp path đúng là sẽ xoá được
+mv <sourcefile> <newsource> :di chuyển một file, đồng thời có thể rename file đó luôn
+mkdir <dirsource> :tạo một directory (folder)
+rmdir <dirsource :xoá một directory
+
+
+*** Lesson 30: File Dislay Commands
+cat <file> :hiển thị nội dung của file
+more <file> :hiển thị nội dung của file, mỗi lần enter là hiển thị thêm một trang
+less <file> :hiện thị nội dung của file, mỗi lần enter là hiển thị thêm một dòng
+head -2 <file> :chỉ hiển thị 2 dòng đầu của nội dung
+tail -3 <file> :chỉ hiển thị 3 dòng cuối của nội dung
+
 
 
