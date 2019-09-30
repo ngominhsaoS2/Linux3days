@@ -83,4 +83,97 @@ head -2 <file> :chỉ hiển thị 2 dòng đầu của nội dung
 tail -3 <file> :chỉ hiển thị 3 dòng cuối của nội dung
 
 
+*** Lesson 30: Filter/Text Processors Commands
+cut -c1 <filename> :lấy ra kí tự đầu tiên của các dòng trong nội dung của file
+cut -c2 <filename> :lấy ra kí tự thứ hai
+cut -c1-3 <filename> :lấy ra ba kí tự đầu của các dòng trong nội dung của file
+awk '{print $1}' <filename> :awk cắt các dấu cách thành các cột, command này dùng để lấy 	nội dung của cột đầu tiên
+grep <keyword> <filename> :tìm kiếm keyword trong nội dung của file, có phân biệt chữ hoa
+sort <file> :sắp xếp nội dung của từng dòng trong file ???
+cat <filename> | awk '{print $2}' | sort | uniq :sort trước khi uniq
+wc <filename> :word count, lines - words - characters
+
+
+*** Lesson 33: Compare Files
+diff <firstfile> <secondfile> :so sánh firstfile và secondfile
+cmp <firstfile> <secondfile> :tương tự trên
+
+
+*** Lesson 34: Compress and Un-compress files
+tar cvf saonm.tar <path> :nén toàn bộ file ở path vào file saonm.tar (cvf là options của 	lệnh tar)
+tar xvf saonm.tar :giải nén toàn bộ file saonm.tar vào thư mục hiện tại
+gzip saonm.tar :zip lại file .tar, dung lượng đã nhẹ đi rất nhiều
+gzip -d saonm.tar.gz :chuyển file .tar.gz lại thành .tar
+
+
+*** Lesson 35: vi Editor
+vi <filename> :tạo file, đồng thời mở luôn editor để edit file, sau đó ấn các nút bên dưới
+   I - insert
+   Esc - escape
+   R - replace
+   D - delete cả dòng
+   X - delete một kí tự
+   U - undo
+   /keyword - tìm keyword ở trong vi editor
+   :q! - quit without save
+   :wq! - quit and save
+   Shift + ZZ - save the file
+
+
+*** Lesson 36: User Account Management
+useradd <username> :tạo một user mới, chỉ adminuser mới có quyền tạo user mới. Không không 	chỉ ra group của user, thì sẽ tự động tạo một group trùng tên với username
+id <username> :check id, group id của user
+groupadd <groupname> :tạo một group mới
+userdel -r <username> :xoá user, xoá luôn cả dir ở home
+groupdel <groupname> :xoá group, xoá luôn ở dir ở trong file /etc/group
+usermod -g <groupname> <username> :chuyển user vào một group
+chgrp -r <groupname> <username> :chuyển use vào một group
+grep <username> /etc/passwd :tìm username ở file /etc/passwd
+useradd -g <groupname> -s /bin/bash -c "Description goes here" -m -d /home/ironman ỉronman
+passwd <username>
+
+
+*** Lesson 37: Switch Users and Sudo Access
+/etc :is a dir where stores all the configuration files
+su - <username> :chuyển sang dùng user khác
+visudo :mở editor quyền
+sudo <command> :cho phép chạy một lệnh mà chỉ root user chạy được mà không cần đăng nhập vào root
+usermod -aG wheel saonm :add saonm vào group wheel, từ đó saonm có thể chạy lệnh sudo
+
+
+*** Lesson 38: Monitor Users
+who :list ra bao nhiêu người đang login
+w :tương tự who, nhưng nhiều thông tin hơn
+last :
+finger :
+id <username> :thông tin về id, group id của user đó
+
+
+*** Lesson 39: System Utility Commands
+date :show datetime hiện tại
+uptime :show time, và số lượng users đang login
+hostname :xem tên của server
+uname -a :
+which <command> :mỗi command thực chất là một script file, câu lệnh which này chỉ ra path của 		command đó
+cal :calendar
+cal <month> <year> :show ngày của tháng năm đó
+cal <year> :show cả năm
+bc :calculator, máy tính
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
